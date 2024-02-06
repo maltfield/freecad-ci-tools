@@ -46,7 +46,14 @@ file_path = './assembly.FCStd'
 # DECLARE VARIABLES #
 #####################
 
+# showMainWindow() without blocking stderr & stdout
+# https://forum.freecad.org/viewtopic.php?p=493152#p493152
+origStdout = sys.stdout
+origStderr = sys.stderr
 FreeCADGui.showMainWindow()
+sys.stdout = origStdout
+sys.stderr = origStderr
+
 document= FreeCAD.openDocument(str(file_path))
 
 # TODO: change export path to be an argument
