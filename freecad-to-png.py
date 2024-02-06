@@ -48,7 +48,9 @@ file_path = './assembly.FCStd'
 
 FreeCADGui.showMainWindow()
 document= FreeCAD.openDocument(str(file_path))
-FreeCADGui.activeView().saveImage( 'image1.png' )
+
+# TODO: change export path to be an argument
+FreeCADGui.activeView().saveImage( 'docs/images/assembly1.png' )
 
 sys.exit(0)
 
