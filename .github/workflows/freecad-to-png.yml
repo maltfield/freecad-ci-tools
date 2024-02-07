@@ -28,9 +28,6 @@ jobs:
         sudo apt-get update
         sudo apt-get install python3 freecad
 
-        # have freecad test itself first
-        freecad --run-test 0
-
         ls -lah
 
         # generate the screenshot file
