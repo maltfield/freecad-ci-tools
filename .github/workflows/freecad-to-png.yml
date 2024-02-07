@@ -22,6 +22,7 @@ jobs:
     - name: Update CAD Screenshot
       shell: bash
       run: |
+        set -x
 
         # install depends
         sudo apt-get update
@@ -35,6 +36,13 @@ jobs:
         # generate the screenshot file
         ./freecad-to-png.py
 
+        # post-run debug checks
+        echo
+        sleep 1
+        date
+        cat /etc/issue
+        uname -a
+        dpkg -l
         ls -lah
 
         # push new README to GitHub
