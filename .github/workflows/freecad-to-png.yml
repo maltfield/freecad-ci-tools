@@ -23,6 +23,7 @@ jobs:
       shell: bash
       run: |
         set -x
+        set +e
 
         # install depends
         sudo apt-get update
